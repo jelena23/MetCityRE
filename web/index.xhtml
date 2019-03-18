@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <title>Login</title>
+    </h:head>
+    <h:body>
+        <h1>Login</h1>
+       <h:form>
+            <h:panelGrid columns="2">
+                    <h:outputLabel value="Username: " for="username" />
+                    <h:inputText id="username" value="#{login.username}" title="Username" />
+                    <h:outputLabel value="Password: " for="password" />
+                    <h:inputSecret id="password" value="#{login.password}" title="Password" />
+            </h:panelGrid>
+            <h:commandButton action="#{login.login}" value="Login"  />
+            <br />
+            <br />
+            <h:outputLabel value="Don't have an account?" />
+            <br />
+            <h:link outcome="/user/Create" value="Register"/>
+        </h:form>
+    </h:body>
+</html>
+
